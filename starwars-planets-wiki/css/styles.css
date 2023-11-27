@@ -1,0 +1,289 @@
+/*=~=~=~=~=~=~ main styles ~=~=~=~=~=~=~*/
+	*{
+		box-sizing:border-box;
+	}
+	body{
+		margin:0;
+		padding:0;
+		color:#fff;
+		font-family:'Poppins', sans-serif;
+		font-weight:bold;
+		background-size: cover;
+	}
+	body.Hoth{
+		background:url('../img/Hoth-planet.png') no-repeat center center fixed;
+		background-size: cover;
+		transition: 0.5s;
+	}
+	body.Tatooine{
+		background:url('../img/tatooine-planet-img.png') no-repeat center center fixed;
+		background-size: cover;
+		transition: 0.5s;
+	}
+	body.Naboo{
+		background:url('../img/naboo-planet-img.png') no-repeat center center fixed;
+		background-size: cover;
+		transition: 0.5s;
+	}
+	.img-show-window-wrap{
+		z-index:99;
+		display:none;
+		cursor:pointer;
+		position:fixed;
+		width:100%;
+		height:100%;
+	}
+	.img-show-window-wrap.show{
+		display:flex;
+		justify-content: center;
+		align-items: center;
+		backdrop-filter: blur(5px);
+		background:rgba(0,0,0,0.5);
+	}
+	.show-window{
+		position:relative;
+		cursor:auto;
+		border-radius:17px;
+		box-shadow: 0px 0px 20px 0px black;
+		width:1280px;
+		height:720px;
+		background:#ccc;
+	}
+	.close-x{
+		content:"X";
+		opacity:0.5;
+		position:absolute;
+		top:15px;
+		right:15px;
+		font-size:40px;
+		color:black;
+		padding:15px 25px 15px 25px;
+		border-radius:7px;
+		transition: 0.4s;
+	}
+	.close-x:hover{
+		opacity:1;
+		cursor:pointer;
+		color:red;
+		transition: 0.25s;
+	}
+	.show-window.show{
+	}
+	.show-window.Hoth{
+		background:url('../img/Hoth-planet.png') no-repeat;
+	}
+	.show-window.Tatooine{
+		background:url('../img/tatooine-planet-img.png') no-repeat;
+	}
+	.show-window.Naboo{
+		background:url('../img/naboo-planet-img.png') no-repeat;
+	}
+	img{
+		width:100%;
+		height:100%;
+	}
+	.wrapper{
+		padding:0 0 76px 0;
+	}
+	.wrapper-gradient{
+		position:fixed;
+		z-index:1;
+		width:100%;
+		height:100%;
+		top:0;
+		left:0;
+		background: linear-gradient(180deg, #121010 0%, rgba(14, 12, 12, 0.87) 8.33%, rgba(9, 8, 8, 0.65) 16.67%, rgba(5, 5, 5, 0.46) 22.92%, rgba(0, 0, 0, 0.35) 31.25%, rgba(5, 4, 4, 0.24) 39.06%, rgba(12, 11, 11, 0.46) 50%, rgba(7, 6, 6, 0.65) 59.9%, rgba(0, 0, 0, 0.79) 71.87%, rgba(0, 0, 0, 0.88) 80.73%, rgba(0, 0, 0, 0.94) 90.62%, rgba(0, 0, 0, 0.94) 100%);	
+	}
+	.container{
+		margin:0 auto;
+		width:1216px;
+		/*background:red;*/
+	}
+	.wrapper-content{
+		position:relative;
+		z-index:2;
+	}
+	/*=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~*/
+	/*~=~=~=~=~=~ navbar styles ~=~=~=~=~=~=*/
+	.navbar{
+		width:100%;
+		height:74px;
+		margin-bottom:129px;
+		/*background:green;*/
+	}
+	.navbar-container{
+		display:flex;
+		justify-content: space-between;
+	}
+	/*------------ navbar menu -----------*/
+	/*-------------animation--------------*/
+	.navbar__logo{
+		transition: 0.3s;
+	}
+	.navbar__logo:hover{
+		cursor: pointer;
+		transform: scale(1.05);
+		transition: 0.3s;
+	}
+	.navabr__search:hover{
+		cursor: pointer;
+		transform: scale(1.15);
+		transition: 0.3s;
+	}
+	.navabr__search{
+		transition: 0.4s;
+	}
+	/*-  -  -  -  -  -  -  -  -  -  -  -  -*/
+	.navbar-container div{
+		 align-self: center;
+	}
+	ul.navbar__links{
+	  list-style-type: none;
+	  margin: 0;
+	  padding: 0;
+	  color:#fff;
+	}
+	ul.navbar__links li{
+		position:relative;
+		display:inline-block;
+		font-size:24px;
+	}
+	ul.navbar__links li:hover:after{
+		width:100%;
+		transition: 0.3s;
+		left:0%;
+	}
+	ul.navbar__links li:after{
+		content:"";
+		position:absolute;
+		bottom:-6px;
+		left:50%;
+		width:0%;
+		height:2px;
+		background:#fff;
+		transition: 0.4s;
+	}
+	ul.navbar__links li:not(:last-child){
+		margin-right:68px;
+	}
+	ul.navbar__links li a{
+		display:block;
+		color:#fff;
+		text-decoration: none;
+	}
+	/*--------------------------------------*/
+	/*=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~*/
+	/*~=~=~=~= main content styles =~=~=~=~=*/
+	.main-content{
+		width:100%;
+		margin-bottom:89px;
+	}
+	.main-content-wrap{
+		margin-left:100px;
+		width:791px;
+	}
+	.main-content__title h1{
+		text-shadow: 0px 0px 2px #000;
+		font-size:96px;
+		margin:0 0 37px 0;
+	}
+	.main-content__description{
+		min-height:161px;
+		font-size:20px;
+		font-weight:normal;
+	}
+	/*=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~*/
+	/*~=~=~=~ bottom content styles =~=~=~=~*/
+	.bottom-content{
+		width:100%;
+	}
+	.bottom-content-cointainer{
+		margin:0 auto;
+		width:1307px;
+	}
+	.slider{
+		display:flex;
+		align-items: center;
+		height:298px;
+	}
+	.slider__btn{
+		cursor:pointer;
+		display:flex;
+		justify-content: center;
+		align-items: center;
+		width:56px;
+		height:56px;
+		background: rgba(255, 255, 255, 0.33);
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+		backdrop-filter: blur(2px);
+		border-radius: 10px;
+	}
+
+	.slider__btn-prev{
+		margin-right:37px;
+	}
+	.slider__btn-next{
+		margin-left:37px;
+	}
+	.slider__images{
+		display:flex;
+		justify-content: space-between;
+		width:1119px;
+		height:298px;
+	}
+	.slider__img-wrap{
+		cursor:pointer;
+		overflow:hidden;
+		position:relative;
+		border-radius:17px;
+		width:348px;
+		height:298px;
+		box-shadow: inset 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+		background:red;
+		background: linear-gradient(180deg, rgba(35, 35, 35, 0.67) 0%, rgba(18, 18, 18, 0.1) 24.48%, rgba(0, 0, 0, 0.04) 50%, rgba(4, 4, 4, 0.1) 78.12%, rgba(7, 7, 7, 0.67) 100%);
+	}
+	.slider__img-wrap img{
+		border-radius:19px;
+		/*border:0.1px solid rgb(33,30,29);*/
+		transition:0.5s;
+	}
+	.slider__img-wrap:hover img{
+		transform:scale(1.1);
+		transition:0.3s;
+	}
+	.img-btn-gradient{
+		position:absolute;
+		top:0;
+		left:0;
+		width:100%;
+		height:100%;
+
+		background: linear-gradient(180deg, rgba(35, 35, 35, 0.99) 0%, rgba(18, 18, 18, 0.71) 24.48%, rgba(0, 0, 0, 0.46) 50%, rgba(4, 4, 4, 0.71) 78.12%, rgba(7, 7, 7, 0.92) 100%);
+		transition: background 0.5s;
+	}
+	.img-btn-gradient.active{
+		position:absolute;
+		top:0;
+		left:0;
+		width:100%;
+		height:100%;
+		box-shadow: inset 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+		background: linear-gradient(180deg, rgba(35, 35, 35, 0.67) 0%, rgba(18, 18, 18, 0.1) 24.48%, rgba(0, 0, 0, 0.04) 50%, rgba(4, 4, 4, 0.1) 78.12%, rgba(7, 7, 7, 0.67) 100%);
+		transition: background 0.5s;
+	}
+	.slider__img-description{
+		opacity:0.75;
+		position: absolute;
+		width: 215px;
+		height: 42px;
+		left: 68px;
+		top: 243px;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 28px;
+		line-height: 34px;
+		text-align: center;
+
+		color: #E0E0E0;
+		text-shadow: 0px 0px 2px #000;
+}
